@@ -10,7 +10,7 @@
 
 # production
 /build
-/public
+/public/*
 /.storybook
 /src/App.tsx
 /src/index.tsx
