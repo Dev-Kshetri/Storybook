@@ -1,50 +1,38 @@
-import React from 'react';
-import { BaseButton, Styles } from "./Button.styles";
-import { Spinner } from './Loader';
+import { ButtonComponent } from './Button.styles'
+import { ReactNode } from "react";
 
-export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
-    variant?: 'contained' | 'outlined' | 'empty';
-    size?: 'small' | 'medium' | 'big';
-    backgroundColor?: string;
-    fontColor?: string;
-    borderColor?: string;
-    children: React.ReactNode;
-    startIcon?: React.ReactNode;
-    endIcon?: React.ReactNode;
-    loading?: boolean;
-};
+export interface ButtonProps {
+    variant: "outlined" | "contained" | "empty";
+    size: "small" | "medium" | "large";
+    children?: string;
+    startIcon?: ReactNode;
+    endIcon?: ReactNode;
+    disabled: boolean;
+}
+
 
 export const Button = ({
-    children,
+    variant,
+    size,
     startIcon,
     endIcon,
-    variant = 'contained',
-    loading = false,
-    backgroundColor,
-    size,
-    fontColor,
-    borderColor,
-    ...rest
+    children,
+    disabled,
+    ...props
 }: ButtonProps) => {
-    if (loading) {
-        rest.disabled = true;
-        startIcon = <Spinner size="tiny" />;
-    }
-    const StyledButton = variant === 'contained'
-        ? Styles.Contained
-        : variant === 'outlined'
-            ? Styles.Outlined
-            : Styles.Empty;
+
+    const MuiVariant = variant == "empty" ? "text" : variant;
+
     return (
-        <StyledButton type="button" {...rest} className={`button-${size}`} style={{
-            backgroundColor: backgroundColor,
-            borderColor: borderColor,
-        }}>
+        <ButtonComponent
+            variant={MuiVariant}
+            size={size}
+            disabled={disabled}
+            {...props}
+        >
             {startIcon}
-            <span
-                style={{ color: fontColor }}
-            >{children}</span>
+            <span>{children}</span>
             {endIcon}
-        </StyledButton>
-    );
-};
+        </ButtonComponent>
+    )
+}

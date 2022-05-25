@@ -6,4 +6,15 @@ export const parameters = {
       date: /Date$/,
     },
   },
-}
+};
+
+import { GlobalStyle } from "../src/stories/Global.styles";
+
+export const decorators = [
+  (Story) => (
+    <>
+      <GlobalStyle />
+      <Story />
+    </>
+  ),
+];

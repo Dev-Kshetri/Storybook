@@ -1,57 +1,67 @@
-import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { Meta, Story } from "@storybook/react";
+import { Button, ButtonProps } from './Button';
 import AddIcon from '@mui/icons-material/Add';
-import { Button } from './Button';
+import { Loader } from "./Loader";
+
+const meta: Meta = {
+    title: "santander/Button",
+    component: Button
+}
+export default meta;
 
 
 
-export default {
-    title: 'Santander/Button',
-    component: Button,
-    argTypes: {},
-} as ComponentMeta<typeof Button>;
+const Template: Story<ButtonProps> = (args) => <Button {...args} />
 
-const Template: ComponentStory<typeof Button> = args => <Button {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {
-    children: 'New Component',
-};
-
-export const StartIcon = Template.bind({});
-StartIcon.args = {
-    children: 'New Component',
-    startIcon: <AddIcon />,
-};
-
-export const EndIcon = Template.bind({});
-EndIcon.args = {
-    children: 'New Component',
-    endIcon: <AddIcon />,
-};
+export const Contained = Template.bind({});
+Contained.args = {
+    children: "Click Me",
+    variant: "contained",
+    size: "large"
+}
 
 export const Outlined = Template.bind({});
 Outlined.args = {
-    children: 'New Component',
-    variant: 'outlined',
-};
-
-export const Empty = Template.bind({});
-Empty.args = {
-    children: 'New Component',
-    variant: 'empty',
-};
+    children: "Click Me",
+    variant: "outlined",
+    size: "large"
+}
 
 export const Disabled = Template.bind({});
 Disabled.args = {
-    children: 'New Component',
-    variant: 'outlined',
-    disabled: true,
-};
+    children: "Click Me",
+    variant: "outlined",
+    size: "large",
+    disabled: true
+}
 
-export const Loading = Template.bind({});
-Loading.args = {
-    children: 'New Component',
-    variant: 'outlined',
-    loading: true,
-};
+export const Empty = Template.bind({});
+Empty.args = {
+    children: "Click Me",
+    variant: "empty",
+    size: "large",
+}
+
+
+export const StartIcon = Template.bind({});
+StartIcon.args = {
+    children: "Click Me",
+    variant: "contained",
+    size: "large",
+    startIcon: <AddIcon />
+}
+export const EndIcon = Template.bind({});
+EndIcon.args = {
+    children: "Click Me",
+    variant: "contained",
+    size: "large",
+    endIcon: <AddIcon />
+
+}
+export const LoadingIcon = Template.bind({});
+LoadingIcon.args = {
+    children: "Click Me",
+    variant: "outlined",
+    size: "large",
+    startIcon: <Loader />
+}

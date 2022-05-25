@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .parent-1{
+            display:flex;
+            flex-direction:column;
+            align-items:flex-start;
+        }
+      .child-1,
+      .child-2,
+      .child-3 {
+        background-color: #444;
+        height: 100px;
+
+    }
+      .child-1 {
+        min-width: 100px;
+        background-color: blue;
+      }
+      .child-2 {
+        min-width: 200px;
+        background-color: teal;
+      }
+      .child-3 {
+        min-width: 300px;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent-1">
+      <div class="child-1">1</div>
+      <div class="child-2">2</div>
+      <div class="child-3">3/div>
+    </div>
+  </body>
+</html>
