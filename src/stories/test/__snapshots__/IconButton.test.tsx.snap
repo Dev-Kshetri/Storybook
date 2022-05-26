@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<IconButton> Test should match snapshot and have given classes 1`] = `
+<div>
+  <button
+    backgroundcolor=""
+    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium sc-bczRLJ eDWNr default css-78trlr-MuiButtonBase-root-MuiIconButton-root"
+    edgescolor=""
+    tabindex="0"
+    type="button"
+    variant="default"
+  >
+    <span>
+      🐒
+    </span>
+    <span
+      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+    />
+  </button>
+</div>
+`;
+
+exports[`<IconButton> Test should match snapshot and have given classes 2`] = `
+<div>
+  <button
+    backgroundcolor=""
+    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium sc-bczRLJ eDWNr filled css-78trlr-MuiButtonBase-root-MuiIconButton-root"
+    edgescolor=""
+    tabindex="0"
+    type="button"
+    variant="filled"
+  >
+    <span>
+      🐒
+    </span>
+    <span
+      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+    />
+  </button>
+</div>
+`;
+
+exports[`<IconButton> Test should match snapshot and have given classes 3`] = `
+<div>
+  <button
+    backgroundcolor=""
+    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium sc-bczRLJ eDWNr outlined css-78trlr-MuiButtonBase-root-MuiIconButton-root"
+    edgescolor=""
+    tabindex="0"
+    type="button"
+    variant="outlined"
+  >
+    <span>
+      🐒
+    </span>
+    <span
+      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+    />
+  </button>
+</div>
+`;
