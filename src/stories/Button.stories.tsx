@@ -9,8 +9,6 @@ const meta: Meta = {
 }
 export default meta;
 
-
-
 const Template: Story<ButtonProps> = (args) => <Button {...args} />
 
 export const Contained = Template.bind({});
