@@ -1,0 +1,169 @@
+import {
+  Preview,
+  Story,
+  Meta,
+  Props,
+  Canvas,
+} from "@storybook/addon-docs/blocks";
+import { ButtonGroup } from "components/src/ButtonGroup";
+import Button from "components/src/ButtonGroup/ButtonGroup";
+import {
+  AddInACircleIcon,
+  TrashBinIcon,
+  ReceiptBillsIcon,
+} from "components/src/Icon";
+
+<Meta title="Blocks/ButtonGroup" component={ButtonGroup} />
+
+# ButtonGroup
+
+Find all types of button here.
+
+## 3 ButtonGroup Variants are available | Contained, Outlined, Empty
+
+<Preview>
+  <ButtonGroup colors="error" fontStyle="Capitalize" variant="Contained">
+    <Button> Add</Button>
+    <Button> View</Button>
+    <Button>Delete</Button>
+  </ButtonGroup>
+  <ButtonGroup colors="error" fontStyle="Capitalize" variant="Outlined">
+    <Button> Add</Button>
+    <Button> View</Button>
+    <Button>Delete</Button>
+  </ButtonGroup>
+  <ButtonGroup colors="error" fontStyle="Capitalize" variant="Empty">
+    <Button> Add</Button>
+    <Button> View</Button>
+    <Button>Delete</Button>
+  </ButtonGroup>
+</Preview>
+
+##### ButtonGroup Variants with Icons
+
+<Preview>
+  <ButtonGroup colors="error" fontStyle="Capitalize" variant="Contained">
+    <Button endIcon={<AddInACircleIcon style={{ fill: "#ffffff" }} />}>
+      {" "}
+      Add
+    </Button>
+    <Button endIcon={<ReceiptBillsIcon style={{ fill: "#ffffff" }} />}>
+      {" "}
+      View
+    </Button>
+    <Button endIcon={<TrashBinIcon style={{ fill: "#ffffff" }} />}>
+      Delete
+    </Button>
+  </ButtonGroup>
+  <ButtonGroup colors="error" fontStyle="Capitalize" variant="Outlined">
+    <Button endIcon={<AddInACircleIcon style={{ fill: "red" }} />}> Add</Button>
+    <Button endIcon={<ReceiptBillsIcon style={{ fill: "red" }} />}>
+      {" "}
+      View
+    </Button>
+    <Button endIcon={<TrashBinIcon style={{ fill: "red" }} />}>Delete</Button>
+  </ButtonGroup>
+  <ButtonGroup colors="error" fontStyle="Capitalize" variant="Empty">
+    <Button endIcon={<AddInACircleIcon style={{ fill: "red" }} />}> Add</Button>
+    <Button endIcon={<ReceiptBillsIcon style={{ fill: "red" }} />}>
+      {" "}
+      View
+    </Button>
+    <Button endIcon={<TrashBinIcon style={{ fill: "red" }} />}>Delete</Button>
+  </ButtonGroup>
+</Preview>
+
+## ButtonGroup also have orientation vertical
+
+<Preview>
+  <ButtonGroup colors="error" fontStyle="Capitalize" variant="Contained"  orientation="Vertical">
+    <Button> Add</Button>
+    <Button> View</Button>
+    <Button>Delete</Button>
+  </ButtonGroup>
+  <ButtonGroup colors="error" fontStyle="Capitalize" variant="Outlined"  orientation="Vertical">
+    <Button> Add</Button>
+    <Button> View</Button>
+    <Button>Delete</Button>
+  </ButtonGroup>
+  <ButtonGroup colors="error" fontStyle="Capitalize" variant="Empty" orientation="Vertical">
+    <Button> Add</Button>
+    <Button> View</Button>
+    <Button>Delete</Button>
+  </ButtonGroup>
+</Preview>
+
+##### ButtonGroup orientation vertical with Icons
+
+<Preview>
+  <ButtonGroup colors="error" fontStyle="Capitalize" variant="Contained" orientation="Vertical">
+    <Button endIcon={<AddInACircleIcon style={{ fill: "#ffffff" }} />}>
+      {" "}
+      Add
+    </Button>
+    <Button endIcon={<ReceiptBillsIcon style={{ fill: "#ffffff" }} />}>
+      {" "}
+      View
+    </Button>
+    <Button endIcon={<TrashBinIcon style={{ fill: "#ffffff" }} />}>
+      Delete
+    </Button>
+  </ButtonGroup>
+  <ButtonGroup colors="error" fontStyle="Capitalize" variant="Outlined" orientation="Vertical">
+    <Button endIcon={<AddInACircleIcon style={{ fill: "red" }} />}> Add</Button>
+    <Button endIcon={<ReceiptBillsIcon style={{ fill: "red" }} />}>
+      {" "}
+      View
+    </Button>
+    <Button endIcon={<TrashBinIcon style={{ fill: "red" }} />}>Delete</Button>
+  </ButtonGroup>
+  <ButtonGroup colors="error" fontStyle="Capitalize" variant="Empty" orientation="Vertical">
+    <Button endIcon={<AddInACircleIcon style={{ fill: "red" }} />}> Add</Button>
+    <Button endIcon={<ReceiptBillsIcon style={{ fill: "red" }} />}>
+      {" "}
+      View
+    </Button>
+    <Button endIcon={<TrashBinIcon style={{ fill: "red" }} />}>Delete</Button>
+  </ButtonGroup>
+</Preview>
+
+## ButtonGroup also have FontStyles Uppercase, Lowercase, Capitalize, Default
+
+<Preview>
+  <ButtonGroup colors="error" fontStyle="Capitalize" variant="Contained" fontStyle="Uppercase">
+    <Button> Uppercase</Button>
+    <Button> Uppercase</Button>
+  </ButtonGroup>
+  <ButtonGroup colors="error" fontStyle="Capitalize" variant="Contained" fontStyle="Lowercase">
+    <Button> Lowercase</Button>
+    <Button> Lowercase</Button>
+  </ButtonGroup>
+  <ButtonGroup colors="error" fontStyle="Capitalize" variant="Contained" fontStyle="Capitalize">
+    <Button> Capitalize</Button>
+    <Button> Capitalize</Button>
+  </ButtonGroup>
+  <ButtonGroup colors="error" fontStyle="Capitalize" variant="Contained" fontStyle="Default">
+    <Button> Default</Button>
+    <Button> Default</Button>
+  </ButtonGroup>
+</Preview>
+
+## ButtonGroup with different colors
+<Preview>
+  <ButtonGroup colors="error" fontStyle="Capitalize" variant="Contained" fontStyle="Uppercase" colors="secondary">
+    <Button> Uppercase</Button>
+    <Button> Uppercase</Button>
+  </ButtonGroup>
+  <ButtonGroup colors="error" fontStyle="Capitalize" variant="Contained" fontStyle="Lowercase" colors="success">
+    <Button> Lowercase</Button>
+    <Button> Lowercase</Button>
+  </ButtonGroup>
+  <ButtonGroup colors="error" fontStyle="Capitalize" variant="Contained" fontStyle="Capitalize" colors="inherit">
+    <Button> Capitalize</Button>
+    <Button> Capitalize</Button>
+  </ButtonGroup>
+  <ButtonGroup colors="error" fontStyle="Capitalize" variant="Contained" fontStyle="Default" colors="warning">
+    <Button> Default</Button>
+    <Button> Default</Button>
+  </ButtonGroup>
+</Preview>
