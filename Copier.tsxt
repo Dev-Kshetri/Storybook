@@ -1,0 +1,226 @@
+import {
+  Preview,
+  Story,
+  Meta,
+  Props,
+  Canvas,
+} from "@storybook/addon-docs/blocks";
+import { Select } from "components/src/Select";
+import {DollarSymbolIcon,ReceiveIcon,SantanderIcon,BagOfMoneyDollarIcon,ExhangeIcon} from "components/src/Icon"
+
+<Meta title="Blocks/Select" component={Select} />
+
+# Select
+
+Find all types of Select here.
+
+## Select Default
+
+<Preview>
+  <Select
+    backgroundColor="transparent"
+    label="Select Animals"
+    onFocusVisible={() => {}}
+    selectOptions={[
+      {
+        name: "🙉Monkey",
+        value: "Monkey",
+      },
+      {
+        name: "🐱Gato",
+        value: "Gato",
+      },
+      {
+        name: "🐯Tiger",
+        value: "Tiger",
+      },
+      {
+        name: "🐷Pig",
+        value: "Pig",
+      },
+    ]}
+  />
+</Preview>
+
+## 3 Select Sizes are available | Small, Medium & Large
+
+#### Default select sizes
+<Preview>
+  <div style={{ 
+    display: "flex", 
+    flexDirection: "column", 
+    gap: "10px" ,
+    alignItems:"flex-start",
+    width:"100%"
+    }}>
+    <Select
+      size="small"
+      backgroundColor="transparent"
+      label="Select Animals"
+      onFocusVisible={() => {}}
+      selectOptions={[
+        {
+          name: "🙉Monkey",
+          value: "Monkey",
+        },
+        {
+          name: "🐱Gato",
+          value: "Gato",
+        },
+        {
+          name: "🐯Tiger",
+          value: "Tiger",
+        },
+        {
+          name: "🐷Pig",
+          value: "Pig",
+        },
+      ]}
+    />
+    <Select
+      size="medium"
+      backgroundColor="transparent"
+      label="Select Animals"
+      onFocusVisible={() => {}}
+      selectOptions={[
+        {
+          name: "🙉Monkey",
+          value: "Monkey",
+        },
+        {
+          name: "🐱Gato",
+          value: "Gato",
+        },
+        {
+          name: "🐯Tiger",
+          value: "Tiger",
+        },
+        {
+          name: "🐷Pig",
+          value: "Pig",
+        },
+      ]}
+    />
+    <Select
+      size="large"
+      backgroundColor="transparent"
+      label="Select Animals"
+      onFocusVisible={() => {}}
+      selectOptions={[
+        {
+          name: "🙉Monkey",
+          value: "Monkey",
+        },
+        {
+          name: "🐱Gato",
+          value: "Gato",
+        },
+        {
+          name: "🐯Tiger",
+          value: "Tiger",
+        },
+        {
+          name: "🐷Pig",
+          value: "Pig",
+        },
+      ]}
+    />
+  </div>
+</Preview>
+
+## Select with custom end Icons
+<Preview>
+<Select
+  size="small"
+  customEndIcon={<SantanderIcon />}
+  label="SelectCurrency"
+  onFocusVisible={() => {}}
+  selectOptions={[
+    {
+      name: '💶Euro',
+      value: '€'
+    },
+    {
+      name: '💵Dollar',
+      value: '$'
+    }
+  ]}
+/>
+<Select
+  size="small"
+  customEndIcon={<ReceiveIcon />}
+  label="SelectCurrency"
+  onFocusVisible={() => {}}
+  selectOptions={[
+    {
+      name: '💶Euro',
+      value: '€'
+    },
+    {
+      name: '💵Dollar',
+      value: '$'
+    }
+  ]}
+/>
+<Select
+  size="small"
+  customEndIcon={<BagOfMoneyDollarIcon />}
+  label="SelectCurrency"
+  onFocusVisible={() => {}}
+  selectOptions={[
+    {
+      name: '💶Euro',
+      value: '€'
+    },
+    {
+      name: '💵Dollar',
+      value: '$'
+    }
+  ]}
+/>
+<Select
+  size="small"
+  customEndIcon={<ExhangeIcon />}
+  label="SelectCurrency"
+  onFocusVisible={() => {}}
+  selectOptions={[
+    {
+      name: '💶Euro',
+      value: '€'
+    },
+    {
+      name: '💵Dollar',
+      value: '$'
+    }
+  ]}
+/>
+</Preview>
+
+
+## Select with custom Options
+<Preview>
+<Select
+  customEndIcon={<DollarSymbolIcon />}
+  size="medium"
+  label="SelectCurrency"
+  onFocusVisible={() => {}}
+  selectOptions={[
+    {
+      name: <span style={{alignItems: 'center', display: 'flex', justifyContent: 'space-between', width: '95%'}}><span>Euro</span><b>💶</b></span>,
+      value: '€'
+    },
+    {
+      name: <span style={{alignItems: 'center', display: 'flex', justifyContent: 'space-between', width: '95%'}}><span>Dollar</span><b>💵</b></span>,
+      value: '$'
+    },
+    {
+      name: <span style={{alignItems: 'center', display: 'flex', justifyContent: 'space-between', width: '95%'}}><span>Yen</span><b>💴</b></span>,
+      value: '$'
+    },
+    {
+      name: <span style={{alignItems: 'center', display: 'flex', justifyContent: 'space-between', width: '95%'}}><span>Pound</span><b>💷</b></span>,
+      value: '$'
+    }
+  ]}
+/>
+</Preview>
